@@ -1,7 +1,7 @@
 {
     "name": "oboyda/wp-theme-bootstrap",
     "description": "Bootstrap WordPress theme",
-    "version": "1.0.0.dev",
+    "version": "1.0.dev",
     "autoload": {
         "psr-4": {
             "WPTB\\": "src/classes"

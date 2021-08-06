@@ -1,0 +1,15 @@
+{
+    "name": "oboyda/wp-theme-bootstrap",
+    "version": "1.2.dev",
+    "private": true,
+    "main": "build/index.js",
+    "module": "src/index.js",
+    "scripts": {
+        "start": "wp-scripts start",
+        "build": "wp-scripts build"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@wordpress/scripts": "16.0.0"
+    }
+}

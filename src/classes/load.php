@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Init WPTB\View\Action classes
+ * Init WPTB\Filter classes
  * ------------------------------
  */
-(new \WPTB\View\Action\Page());
+if(class_exists('\WPTB\Filter\View')) (new \WPTB\Filter\View());
