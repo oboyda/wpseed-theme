@@ -7,7 +7,7 @@ export const BlockSave = (props) => {
     
     return (
         <div {...blockProps}>
-            <h4>{__('First Block saved', 'wptb')}</h4>
+            <h4>{__('First Block saved', 'wptboot')}</h4>
         </div>
     );
 };

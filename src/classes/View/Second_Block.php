@@ -1,6 +1,6 @@
 <?php
 
-namespace WPTB\View;
+namespace WPTBOOT\View;
 
 class Second_Block extends \WPSEED\View 
 {
