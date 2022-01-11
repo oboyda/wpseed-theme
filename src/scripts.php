@@ -40,18 +40,20 @@ function wptboot_register_styles()
 }
 
 /*
- * Enqueue scripts on admin
+ * Enqueue scripts on ADMIN
  * ----------------------------------------
  */
-add_action('admin_enqueue_scripts', 'wptboot_enqueue_scripts_admin');
+//add_action('admin_enqueue_scripts', 'wptboot_enqueue_scripts_admin');
 
 function wptboot_enqueue_scripts_admin()
 {
     //wp_enqueue_script('wptboot-admin');
+    
+    wp_localize_script('wptboot-admin', 'wptbootAdminVars', apply_filters('wptboot_admin_vars', []));
 }
 
 /*
- * Enqueue styles on admin
+ * Enqueue styles on ADMIN
  * ----------------------------------------
  */
 add_action('admin_enqueue_scripts', 'wptboot_enqueue_styles_admin');
@@ -62,22 +64,7 @@ function wptboot_enqueue_styles_admin()
 }
 
 /*
- * Print ajaxurl global on front
- * ----------------------------------------
- */
-//add_action('wp_head', 'wptboot_print_ajax_url_global');
-
-function wptboot_print_ajax_url_global()
-{
-    ?>
-    <script type="text/javascript">
-        const ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
-    </script>
-    <?php
-}
-
-/*
- * Enqueue scripts on front
+ * Enqueue scripts on FRONT
  * ----------------------------------------
  */
 
@@ -90,12 +77,15 @@ function wptboot_enqueue_scripts()
     //wp_enqueue_script('vue');
     //wp_enqueue_script('axios');
     //wp_enqueue_script('qs');
-    //wp_localize_script('vue', 'vueVars', apply_filters('vue_vars', []));
     //wp_enqueue_script('wptboot-front');
+    
+    wp_localize_script('wptboot-front', 'wptbootFrontVars', apply_filters('wptboot_front_vars', [
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ]));
 }
 
 /*
- * Enqueue styles on front
+ * Enqueue styles on FRONT
  * ----------------------------------------
  */
 
@@ -104,8 +94,8 @@ add_action('wp_enqueue_scripts', 'wptboot_enqueue_styles');
 function wptboot_enqueue_styles()
 {
     wp_enqueue_style('bootstrap');
+    wp_enqueue_style('wptboot-style');
+    //wp_enqueue_style('wptboot-front');
     wp_enqueue_style('wptboot-views');
-    wp_enqueue_style('wptboot-front');
-    //wp_enqueue_style('wpd-style');
     //wp_enqueue_style('child-style');
 }
