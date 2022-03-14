@@ -1,4 +1,4 @@
-<footer class="<?php echo $view->getClasses(); ?>">
+<footer class="<?php echo $view->getHtmlClass(); ?>">
 
     <?php if(is_active_sidebar('footer-widgets')): ?>
         <div class="widgets">

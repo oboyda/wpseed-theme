@@ -8,7 +8,6 @@
         "start": "wp-scripts start",
         "build": "wp-scripts build"
     },
-    "dependencies": {},
     "devDependencies": {
         "@wordpress/scripts": "16.0.0"
     }

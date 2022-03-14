@@ -11,7 +11,7 @@
     
     <?php wp_body_open(); ?>
     
-    <?php wpseed_print_view('header'); ?>
+    <?php wptboot_print_view('header'); ?>
 
     <div id="content" class="site-content">
         <div id="primary" class="content-area">

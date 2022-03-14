@@ -85,7 +85,7 @@ function wptboot_register_menus()
     register_nav_menus(
         array(
             'primary' => esc_html__('Primary menu', 'wptboot'),
-            'footer'  => __('Secondary menu', 'wptboot')
+            'footer'  => __('Footer menu', 'wptboot')
         )
     );
 }
@@ -109,22 +109,4 @@ function wptboot_register_widget_areas()
             'after_title'   => '</h2>',
         )
     );
-}
-
-/*
- * Setup values for oboyda/wp-seed package
- * ----------------------------------------
- */
-add_filter('wpseed_views_dir', 'wptboot_filter_views_dir');
-
-function wptboot_filter_views_dir()
-{
-    return WPTBOOT_DIR . '/src/views';
-}
-
-add_filter('wpseed_views_namespace', 'wptboot_filter_views_namespace');
-
-function wptboot_filter_views_namespace()
-{
-    return '\WPTBOOT\View';
 }

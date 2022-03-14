@@ -1,5 +1,3 @@
 
-import './gutenberg/first-block';
-import './gutenberg/second-block';
-
-import './views/vue-js/index';
+// import './js/main.js';
+import './js/views.js';

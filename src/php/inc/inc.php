@@ -3,7 +3,7 @@
 /*
  * Auto include files in inc/ directory
  */
-foreach(wptboot_get_dir_files(dirname(__FILE__), true, false) as $dir_file)
+foreach(wpseed_get_dir_files(dirname(__FILE__), true, false) as $dir_file)
 {
     if(is_dir($dir_file))
     {
