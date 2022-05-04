@@ -10,4 +10,3 @@ require WPTBOOT_DIR . '/src/php/utils.php';
 require WPTBOOT_DIR . '/src/php/classes/load.php';
 require WPTBOOT_DIR . '/src/php/setup.php';
 require WPTBOOT_DIR . '/src/php/scripts.php';
-require WPTBOOT_DIR . '/src/php/inc/inc.php';

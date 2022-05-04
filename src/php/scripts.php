@@ -75,7 +75,6 @@ function wptboot_enqueue_styles_admin()
  * Enqueue scripts on FRONT
  * ----------------------------------------
  */
-
 add_action('wp_enqueue_scripts', 'wptboot_enqueue_scripts');
 
 function wptboot_enqueue_scripts()
@@ -91,7 +90,6 @@ function wptboot_enqueue_scripts()
  * Enqueue styles on FRONT
  * ----------------------------------------
  */
-
 add_action('wp_enqueue_scripts', 'wptboot_enqueue_styles');
 
 function wptboot_enqueue_styles()
