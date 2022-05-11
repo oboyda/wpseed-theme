@@ -84,7 +84,7 @@ function wptboot_enqueue_scripts()
 {
     wp_enqueue_script('wptboot-index');
     
-    wp_localize_script('wptboot-index', 'indexVars', apply_filters('js_index_vars', [
+    wp_localize_script('wptboot-index', 'wptbootIndexVars', apply_filters('wptboot_js_index_vars', [
         'ajaxurl' => admin_url('admin-ajax.php')
     ]));
 }
