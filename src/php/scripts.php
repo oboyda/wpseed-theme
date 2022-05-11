@@ -17,7 +17,10 @@ function wptboot_register_scripts()
         wp_register_script(
             'wptboot-index',
             WPTBOOT_INDEX . '/build/index.js',
-            $asset['dependencies'],
+            array_merge(
+                ['jquery'], 
+                $asset['dependencies']
+            ),
             $asset['version']
         );
     }
@@ -31,7 +34,7 @@ add_action('init', 'wptboot_register_styles');
 
 function wptboot_register_styles()
 {
-    $asset_file = WPTBOOT_DIR . '/build/style.asset.php';
+    $asset_file = WPTBOOT_DIR . '/build/index.asset.php';
 
     if(file_exists($asset_file))
     {
@@ -39,7 +42,7 @@ function wptboot_register_styles()
 
         wp_register_style(
             'wptboot-style',
-            WPTBOOT_INDEX . '/build/style.css',
+            WPTBOOT_INDEX . '/build/index.css',
             // $asset['dependencies'],
             [],
             $asset['version']
