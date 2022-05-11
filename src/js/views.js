@@ -32,6 +32,6 @@ jQuery(function($)
 
         //...
     };
-    $(document.body).on("view_first_block", initFirstBlock);
+    $(document.body).on("view_loaded_first-block", initFirstBlock);
 
 });
