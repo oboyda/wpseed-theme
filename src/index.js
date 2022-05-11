@@ -1,3 +1,2 @@
-
-// import './js/main.js';
-import './js/views.js';
+import './scss/index.scss';
+import './js/index.js';
