@@ -10,7 +10,7 @@ require WPTBOOT_DIR . '/src/php/setup.php';
 
 add_action('after_setup_theme', function(){
 
-    $deps = new \HS\Deps([
+    $deps = new \WPTBOOT\Deps([
         'advanced-custom-fields-pro/acf.php'
         // 'wp-plugin-bootstrap/plugin.php'
     ]);
