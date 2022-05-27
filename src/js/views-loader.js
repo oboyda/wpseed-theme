@@ -6,13 +6,15 @@ jQuery.fn.extend({
             const viewName = _view.data("view");
             if(typeof viewName !== 'undefined' && viewName)
             {
-                const triggerName = "view_loaded_" + viewName;
-                jQuery(document.body).triggerHandler(triggerName, [_view]);
+                jQuery(document.body).triggerHandler("view_loaded_" + viewName, [_view]);
                 if(triggerChildren)
                 {
                     _view.find(".view").viewTriggerLoaded();
                 }
             }
+            // _view.on("unload", function(){
+            //     jQuery(this).triggerHandler("view_unloaded_" + viewName, [_view]);
+            // });
         });
     },
     viewReplace: function(html, triggerLoadedEvent=true, triggerChildren=false)
@@ -20,9 +22,9 @@ jQuery.fn.extend({
         this.html(html);
         const _view = this.children();
         this.replaceWith(_view);
-        if(triggerLoadedEvent && typeof window.triggerViewLoadedEvents !== 'undefined')
+        if(triggerLoadedEvent)
         {
-            window.triggerViewLoadedEvents(_view, triggerChildren);
+            _view.viewTriggerLoaded(triggerChildren);
         }
     },
     viewExists: function()
