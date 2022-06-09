@@ -1,3 +1,5 @@
+// @import "./common.scss";
+@import "./views.scss";
 
 /*
 * Global
@@ -5,6 +7,32 @@
 */
 
 html, body {
-    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
     line-height: 1.4em;
+    font-weight: 400;
+    color: #000000;
+
+    @media (min-width: $breakpoint_desktop)
+    {
+        font-size: 14px;
+    }
+}
+
+/*
+* Links
+* ----------------------------------------
+*/
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    padding: 0 0 1.5em;
+    margin: 0;
+}
+p:last-child {
+    padding-bottom: 0;
 }
