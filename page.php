@@ -1,16 +1,16 @@
 <?php 
 /*
- * Template Name: Main page template
- */
+* Template Name: Main page template
+*/
+
+global $post;
 
 get_header();
 ?>
 
-<div class="main">
+<div class="page-content">
     
-    <?php wpseed_get_view('first-block', ['title' => __('First block', 'wptboot')]); ?>
-    
-    <?php wpseed_get_view('second-block', ['title' => __('Second block', 'wptboot')]); ?>
+    <?php echo apply_filters('the_content', $post->post_content); ?>
     
 </div>
 

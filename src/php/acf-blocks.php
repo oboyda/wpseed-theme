@@ -17,7 +17,7 @@ function wptboot_register_blocks()
         */
         acf_register_block([
             'name'				=> 'first-block',
-            'title'				=> __('ALTV First Block', 'wptboot'),
+            'title'				=> __('WPTBOOT First Block', 'wptboot'),
             //'description'		=> __('Block description.', 'wptboot'),
             'render_callback'	=> 'wptboot_render_block_view',
             'category'			=> 'wptboot-blocks',
