@@ -4,5 +4,5 @@ import App from './views/App';
 
 ReactDOM.render(
     <App />,
-    document.getElementById('wptb-root')
+    document.getElementById('tart-root')
 );

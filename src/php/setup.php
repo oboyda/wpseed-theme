@@ -4,21 +4,21 @@
  * Load theme textdomain
  * ----------------------------------------
  */
-add_action('after_setup_theme', 'wptb_load_textdomain');
+add_action('after_setup_theme', 'tart_load_textdomain');
 
-function wptb_load_textdomain()
+function tart_load_textdomain()
 {
-    //load_child_theme_textdomain('wptb', WPTB_DIR . '/langs');
-    load_theme_textdomain('wptb', WPTB_DIR . '/langs');
+    //load_child_theme_textdomain('tart', TART_DIR . '/langs');
+    load_theme_textdomain('tart', TART_DIR . '/langs');
 }
 
 /*
  * Theme support
  * ----------------------------------------
  */
-add_action('after_setup_theme', 'wptb_add_theme_support');
+add_action('after_setup_theme', 'tart_add_theme_support');
 
-function wptb_add_theme_support()
+function tart_add_theme_support()
 {
     //add_theme_support('automatic-feed-links');
     
@@ -78,14 +78,14 @@ function wptb_add_theme_support()
  * Register menus
  * ----------------------------------------
  */
-add_action('after_setup_theme', 'wptb_register_menus');
+add_action('after_setup_theme', 'tart_register_menus');
 
-function wptb_register_menus()
+function tart_register_menus()
 {
     register_nav_menus(
         array(
-            'primary' => esc_html__('Primary menu', 'wptb'),
-            'footer'  => __('Footer menu', 'wptb')
+            'primary' => esc_html__('Primary menu', 'tart'),
+            'footer'  => __('Footer menu', 'tart')
         )
     );
 }

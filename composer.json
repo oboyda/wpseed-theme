@@ -4,7 +4,7 @@
     "version": "1.7.0",
     "autoload": {
         "psr-4": {
-            "WPTB\\": "src/php/classes"
+            "TART\\": "src/php/classes"
         }
     },
     "repositories" : [
