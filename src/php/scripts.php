@@ -3,19 +3,19 @@
  * Register scripts
  * ----------------------------------------
  */
-add_action('init', 'wptboot_register_scripts');
+add_action('init', 'wptb_register_scripts');
 
-function wptboot_register_scripts()
+function wptb_register_scripts()
 {
-    $admin_asset_file = WPTBOOT_DIR . '/build/admin.asset.php';
+    $admin_asset_file = WPTB_DIR . '/build/admin.asset.php';
 
     if(file_exists($admin_asset_file))
     {
         $admin_asset = include($admin_asset_file);
 
         wp_register_script(
-            'wptboot-admin',
-            WPTBOOT_INDEX . '/build/admin.js',
+            'wptb-admin',
+            WPTB_INDEX . '/build/admin.js',
             array_merge(
                 ['jquery'],
                 $admin_asset['dependencies']
@@ -24,15 +24,15 @@ function wptboot_register_scripts()
         );
     }
 
-    $front_asset_file = WPTBOOT_DIR . '/build/front.asset.php';
+    $front_asset_file = WPTB_DIR . '/build/front.asset.php';
 
     if(file_exists($front_asset_file))
     {
         $front_asset = include($front_asset_file);
 
         wp_register_script(
-            'wptboot-front',
-            WPTBOOT_INDEX . '/build/front.js',
+            'wptb-front',
+            WPTB_INDEX . '/build/front.js',
             array_merge(
                 ['jquery'],
                 $front_asset['dependencies']
@@ -46,32 +46,32 @@ function wptboot_register_scripts()
  * Register styles
  * ----------------------------------------
  */
-add_action('init', 'wptboot_register_styles');
+add_action('init', 'wptb_register_styles');
 
-function wptboot_register_styles()
+function wptb_register_styles()
 {
     wp_register_style(
         'bootstrap-grid',
-        WPTBOOT_INDEX . '/assets/bootstrap/css/bootstrap-grid.min.css',
+        WPTB_INDEX . '/assets/bootstrap/css/bootstrap-grid.min.css',
         [],
-        WPTBOOT_VERSION
+        WPTB_VERSION
     );
     wp_register_style(
         'bootstrap',
-        WPTBOOT_INDEX . '/assets/bootstrap/css/bootstrap.min.css',
+        WPTB_INDEX . '/assets/bootstrap/css/bootstrap.min.css',
         [],
-        WPTBOOT_VERSION
+        WPTB_VERSION
     );
 
-    $admin_asset_file = WPTBOOT_DIR . '/build/admin.asset.php';
+    $admin_asset_file = WPTB_DIR . '/build/admin.asset.php';
 
     if(file_exists($admin_asset_file))
     {
         $admin_asset = include($admin_asset_file);
 
         wp_register_style(
-            'wptboot-admin',
-            WPTBOOT_INDEX . '/build/admin.css',
+            'wptb-admin',
+            WPTB_INDEX . '/build/admin.css',
             // $asset['dependencies'],
             [
                 'bootstrap-grid', 
@@ -80,15 +80,15 @@ function wptboot_register_styles()
         );
     }
 
-    $front_asset_file = WPTBOOT_DIR . '/build/front.asset.php';
+    $front_asset_file = WPTB_DIR . '/build/front.asset.php';
 
     if(file_exists($front_asset_file))
     {
         $front_asset = include($front_asset_file);
 
         wp_register_style(
-            'wptboot-front',
-            WPTBOOT_INDEX . '/build/front.css',
+            'wptb-front',
+            WPTB_INDEX . '/build/front.css',
             // $asset['dependencies'],
             [
                 'bootstrap', 
@@ -102,37 +102,37 @@ function wptboot_register_styles()
  * Enqueue scripts on ADMIN
  * ----------------------------------------
  */
-//add_action('admin_enqueue_scripts', 'wptboot_enqueue_scripts_admin');
+//add_action('admin_enqueue_scripts', 'wptb_enqueue_scripts_admin');
 
-function wptboot_enqueue_scripts_admin()
+function wptb_enqueue_scripts_admin()
 {
-    // wp_enqueue_script('wptboot-admin');
+    // wp_enqueue_script('wptb-admin');
 
-    // wp_localize_script('wptboot-admin', 'wptbootAdminVars', apply_filters('wptboot_admin_vars', []));
+    // wp_localize_script('wptb-admin', 'wptbAdminVars', apply_filters('wptb_admin_vars', []));
 }
 
 /*
  * Enqueue styles on ADMIN
  * ----------------------------------------
  */
-add_action('admin_enqueue_scripts', 'wptboot_enqueue_styles_admin');
+add_action('admin_enqueue_scripts', 'wptb_enqueue_styles_admin');
 
-function wptboot_enqueue_styles_admin()
+function wptb_enqueue_styles_admin()
 {
-    wp_enqueue_style('wptboot-admin');
+    wp_enqueue_style('wptb-admin');
 }
 
 /*
  * Enqueue scripts on FRONT
  * ----------------------------------------
  */
-add_action('wp_enqueue_scripts', 'wptboot_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'wptb_enqueue_scripts');
 
-function wptboot_enqueue_scripts()
+function wptb_enqueue_scripts()
 {
-    wp_enqueue_script('wptboot-front');
+    wp_enqueue_script('wptb-front');
     
-    wp_localize_script('wptboot-front', 'wptbootIndexVars', apply_filters('wptboot_js_index_vars', [
+    wp_localize_script('wptb-front', 'wptbIndexVars', apply_filters('wptb_js_index_vars', [
         'ajaxurl' => admin_url('admin-ajax.php')
     ]));
 }
@@ -141,9 +141,9 @@ function wptboot_enqueue_scripts()
  * Enqueue styles on FRONT
  * ----------------------------------------
  */
-add_action('wp_enqueue_scripts', 'wptboot_enqueue_styles');
+add_action('wp_enqueue_scripts', 'wptb_enqueue_styles');
 
-function wptboot_enqueue_styles()
+function wptb_enqueue_styles()
 {
-    wp_enqueue_style('wptboot-front');
+    wp_enqueue_style('wptb-front');
 }

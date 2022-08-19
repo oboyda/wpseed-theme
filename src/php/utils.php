@@ -1,11 +1,11 @@
 <?php 
 
-function wptboot_get_view($view_name, $args=[], $echo=false)
+function wptb_get_view($view_name, $args=[], $echo=false)
 {
-    return wpseed_get_view($view_name, $args, $echo, WPTBOOT_DIR . '/src/php/views', '\WPTBOOT\View');
+    return wpseed_get_view($view_name, $args, $echo, WPTB_DIR . '/src/php/views', '\WPTB\View');
 }
 
-function wptboot_print_view($view_name, $args=[])
+function wptb_print_view($view_name, $args=[])
 {
-    wptboot_get_view($view_name, $args, true);
+    wptb_get_view($view_name, $args, true);
 }

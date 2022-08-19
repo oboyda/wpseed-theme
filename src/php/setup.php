@@ -4,21 +4,21 @@
  * Load theme textdomain
  * ----------------------------------------
  */
-add_action('after_setup_theme', 'wptboot_load_textdomain');
+add_action('after_setup_theme', 'wptb_load_textdomain');
 
-function wptboot_load_textdomain()
+function wptb_load_textdomain()
 {
-    //load_child_theme_textdomain('wptboot', WPTBOOT_DIR . '/langs');
-    load_theme_textdomain('wptboot', WPTBOOT_DIR . '/langs');
+    //load_child_theme_textdomain('wptb', WPTB_DIR . '/langs');
+    load_theme_textdomain('wptb', WPTB_DIR . '/langs');
 }
 
 /*
  * Theme support
  * ----------------------------------------
  */
-add_action('after_setup_theme', 'wptboot_add_theme_support');
+add_action('after_setup_theme', 'wptb_add_theme_support');
 
-function wptboot_add_theme_support()
+function wptb_add_theme_support()
 {
     //add_theme_support('automatic-feed-links');
     
@@ -78,14 +78,14 @@ function wptboot_add_theme_support()
  * Register menus
  * ----------------------------------------
  */
-add_action('after_setup_theme', 'wptboot_register_menus');
+add_action('after_setup_theme', 'wptb_register_menus');
 
-function wptboot_register_menus()
+function wptb_register_menus()
 {
     register_nav_menus(
         array(
-            'primary' => esc_html__('Primary menu', 'wptboot'),
-            'footer'  => __('Footer menu', 'wptboot')
+            'primary' => esc_html__('Primary menu', 'wptb'),
+            'footer'  => __('Footer menu', 'wptb')
         )
     );
 }
