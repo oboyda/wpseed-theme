@@ -11,6 +11,6 @@
     
     <?php wp_body_open(); ?>
     
-    <?php tart_print_view('header'); ?>
+    <?php wptb_print_view('header'); ?>
 
     <div id="content">

@@ -1,6 +1,6 @@
 <?php
 
-namespace TART\View;
+namespace WPTB\View;
 
 class Header extends \WPSEED\View 
 {
