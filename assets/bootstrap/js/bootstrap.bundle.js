@@ -46,16 +46,16 @@
 
     if (!selector || selector === '#') {
       let hrefAttr = element.getAttribute('href'); // The only valid content that could double as a selector are IDs or classes,
-      // so everything swptbing with `#` or `.`. If a "real" URL is used as the selector,
+      // so everything swptbooting with `#` or `.`. If a "real" URL is used as the selector,
       // `document.querySelector` will rightfully complain it is invalid.
       // See https://github.com/twbs/bootstrap/issues/32273
 
-      if (!hrefAttr || !hrefAttr.includes('#') && !hrefAttr.swptbsWith('.')) {
+      if (!hrefAttr || !hrefAttr.includes('#') && !hrefAttr.swptbootsWith('.')) {
         return null;
       } // Just in case some CMS puts out a full URL with the anchor appended
 
 
-      if (hrefAttr.includes('#') && !hrefAttr.swptbsWith('#')) {
+      if (hrefAttr.includes('#') && !hrefAttr.swptbootsWith('#')) {
         hrefAttr = `#${hrefAttr.split('#')[1]}`;
       }
 
@@ -193,12 +193,12 @@
 
   const noop = () => {};
   /**
-   * Trick to reswptb an element's animation
+   * Trick to reswptboot an element's animation
    *
    * @param {HTMLElement} element
    * @return void
    *
-   * @see https://www.charistheo.io/blog/2021/02/reswptb-a-css-animation-with-javascript/#reswptbing-a-css-animation
+   * @see https://www.charistheo.io/blog/2021/02/reswptboot-a-css-animation-with-javascript/#reswptbooting-a-css-animation
    */
 
 
@@ -343,7 +343,7 @@
     mouseleave: 'mouseout'
   };
   const customEventsRegex = /^(mouseenter|mouseleave)/i;
-  const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectswptb', 'selectend', 'keydown', 'keypress', 'keyup', 'orientationchange', 'touchswptb', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gestureswptb', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll']);
+  const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectswptboot', 'selectend', 'keydown', 'keypress', 'keyup', 'orientationchange', 'touchswptboot', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gestureswptboot', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll']);
   /**
    * ------------------------------------------------------------------------
    * Private methods
@@ -517,7 +517,7 @@
       const [delegation, originalHandler, typeEvent] = normalizeParams(originalTypeEvent, handler, delegationFn);
       const inNamespace = typeEvent !== originalTypeEvent;
       const events = getEvent(element);
-      const isNamespace = originalTypeEvent.swptbsWith('.');
+      const isNamespace = originalTypeEvent.swptbootsWith('.');
 
       if (typeof originalHandler !== 'undefined') {
         // Simplest case: handler is passed, remove that listener ONLY.
@@ -817,7 +817,7 @@
           return;
         }
 
-        if (data[config] === undefined || config.swptbsWith('_') || config === 'constructor') {
+        if (data[config] === undefined || config.swptbootsWith('_') || config === 'constructor') {
           throw new TypeError(`No method named "${config}"`);
         }
 
@@ -959,7 +959,7 @@
       }
 
       const attributes = {};
-      Object.keys(element.dataset).filter(key => key.swptbsWith('bs')).forEach(key => {
+      Object.keys(element.dataset).filter(key => key.swptbootsWith('bs')).forEach(key => {
         let pureKey = key.replace(/^bs/, '');
         pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
         attributes[pureKey] = normalizeData(element.dataset[key]);
@@ -1108,19 +1108,19 @@
   const EVENT_KEYDOWN = `keydown${EVENT_KEY$a}`;
   const EVENT_MOUSEENTER = `mouseenter${EVENT_KEY$a}`;
   const EVENT_MOUSELEAVE = `mouseleave${EVENT_KEY$a}`;
-  const EVENT_TOUCHSWPTB = `touchswptb${EVENT_KEY$a}`;
+  const EVENT_TOUCHSWPTBOOT = `touchswptboot${EVENT_KEY$a}`;
   const EVENT_TOUCHMOVE = `touchmove${EVENT_KEY$a}`;
   const EVENT_TOUCHEND = `touchend${EVENT_KEY$a}`;
   const EVENT_POINTERDOWN = `pointerdown${EVENT_KEY$a}`;
   const EVENT_POINTERUP = `pointerup${EVENT_KEY$a}`;
-  const EVENT_DRAG_SWPTB = `dragswptb${EVENT_KEY$a}`;
+  const EVENT_DRAG_SWPTBOOT = `dragswptboot${EVENT_KEY$a}`;
   const EVENT_LOAD_DATA_API$2 = `load${EVENT_KEY$a}${DATA_API_KEY$6}`;
   const EVENT_CLICK_DATA_API$5 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
   const CLASS_NAME_CAROUSEL = 'carousel';
   const CLASS_NAME_ACTIVE$2 = 'active';
   const CLASS_NAME_SLIDE = 'slide';
   const CLASS_NAME_END = 'carousel-item-end';
-  const CLASS_NAME_SWPTB = 'carousel-item-swptb';
+  const CLASS_NAME_SWPTBOOT = 'carousel-item-swptboot';
   const CLASS_NAME_NEXT = 'carousel-item-next';
   const CLASS_NAME_PREV = 'carousel-item-prev';
   const CLASS_NAME_POINTER_EVENT = 'pointer-event';
@@ -1150,11 +1150,11 @@
       this._isPaused = false;
       this._isSliding = false;
       this.touchTimeout = null;
-      this.touchSwptbX = 0;
+      this.touchSwptbootX = 0;
       this.touchDeltaX = 0;
       this._config = this._getConfig(config);
       this._indicatorsElement = SelectorEngine.findOne(SELECTOR_INDICATORS, this._element);
-      this._touchSupported = 'ontouchswptb' in document.documentElement || navigator.maxTouchPoints > 0;
+      this._touchSupported = 'ontouchswptboot' in document.documentElement || navigator.maxTouchPoints > 0;
       this._pointerEvent = Boolean(window.PointerEvent);
 
       this._addEventListeners();
@@ -1289,22 +1289,22 @@
         return this._pointerEvent && (event.pointerType === POINTER_TYPE_PEN || event.pointerType === POINTER_TYPE_TOUCH);
       };
 
-      const swptb = event => {
+      const swptboot = event => {
         if (hasPointerPenTouch(event)) {
-          this.touchSwptbX = event.clientX;
+          this.touchSwptbootX = event.clientX;
         } else if (!this._pointerEvent) {
-          this.touchSwptbX = event.touches[0].clientX;
+          this.touchSwptbootX = event.touches[0].clientX;
         }
       };
 
       const move = event => {
         // ensure swiping with one touch and not pinching
-        this.touchDeltaX = event.touches && event.touches.length > 1 ? 0 : event.touches[0].clientX - this.touchSwptbX;
+        this.touchDeltaX = event.touches && event.touches.length > 1 ? 0 : event.touches[0].clientX - this.touchSwptbootX;
       };
 
       const end = event => {
         if (hasPointerPenTouch(event)) {
-          this.touchDeltaX = event.clientX - this.touchSwptbX;
+          this.touchDeltaX = event.clientX - this.touchSwptbootX;
         }
 
         this._handleSwipe();
@@ -1316,7 +1316,7 @@
           // here, we listen for touchend, explicitly pause the carousel
           // (as if it's the second time we tap on it, mouseenter compat event
           // is NOT fired) and after a timeout (to allow for mouse compatibility
-          // events to fire) we explicitly reswptb cycling
+          // events to fire) we explicitly reswptboot cycling
           this.pause();
 
           if (this.touchTimeout) {
@@ -1328,16 +1328,16 @@
       };
 
       SelectorEngine.find(SELECTOR_ITEM_IMG, this._element).forEach(itemImg => {
-        EventHandler.on(itemImg, EVENT_DRAG_SWPTB, event => event.preventDefault());
+        EventHandler.on(itemImg, EVENT_DRAG_SWPTBOOT, event => event.preventDefault());
       });
 
       if (this._pointerEvent) {
-        EventHandler.on(this._element, EVENT_POINTERDOWN, event => swptb(event));
+        EventHandler.on(this._element, EVENT_POINTERDOWN, event => swptboot(event));
         EventHandler.on(this._element, EVENT_POINTERUP, event => end(event));
 
         this._element.classList.add(CLASS_NAME_POINTER_EVENT);
       } else {
-        EventHandler.on(this._element, EVENT_TOUCHSWPTB, event => swptb(event));
+        EventHandler.on(this._element, EVENT_TOUCHSWPTBOOT, event => swptboot(event));
         EventHandler.on(this._element, EVENT_TOUCHMOVE, event => move(event));
         EventHandler.on(this._element, EVENT_TOUCHEND, event => end(event));
       }
@@ -1427,7 +1427,7 @@
 
       const isCycling = Boolean(this._interval);
       const isNext = order === ORDER_NEXT;
-      const directionalClassName = isNext ? CLASS_NAME_SWPTB : CLASS_NAME_END;
+      const directionalClassName = isNext ? CLASS_NAME_SWPTBOOT : CLASS_NAME_END;
       const orderClassName = isNext ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
 
       const eventDirectionName = this._orderToDirection(order);
@@ -1725,9 +1725,9 @@
         }
       }
 
-      const swptbEvent = EventHandler.trigger(this._element, EVENT_SHOW$5);
+      const swptbootEvent = EventHandler.trigger(this._element, EVENT_SHOW$5);
 
-      if (swptbEvent.defaultPrevented) {
+      if (swptbootEvent.defaultPrevented) {
         return;
       }
 
@@ -1779,9 +1779,9 @@
         return;
       }
 
-      const swptbEvent = EventHandler.trigger(this._element, EVENT_HIDE$5);
+      const swptbootEvent = EventHandler.trigger(this._element, EVENT_HIDE$5);
 
-      if (swptbEvent.defaultPrevented) {
+      if (swptbootEvent.defaultPrevented) {
         return;
       }
 
@@ -1932,17 +1932,17 @@
   var left = 'left';
   var auto = 'auto';
   var basePlacements = [top, bottom, right, left];
-  var swptb = 'swptb';
+  var swptboot = 'swptboot';
   var end = 'end';
   var clippingParents = 'clippingParents';
   var viewport = 'viewport';
   var popper = 'popper';
   var reference = 'reference';
   var variationPlacements = /*#__PURE__*/basePlacements.reduce(function (acc, placement) {
-    return acc.concat([placement + "-" + swptb, placement + "-" + end]);
+    return acc.concat([placement + "-" + swptboot, placement + "-" + end]);
   }, []);
   var placements = /*#__PURE__*/[].concat(basePlacements, [auto]).reduce(function (acc, placement) {
-    return acc.concat([placement, placement + "-" + swptb, placement + "-" + end]);
+    return acc.concat([placement, placement + "-" + swptboot, placement + "-" + end]);
   }, []); // modifiers that need to read the DOM
 
   var beforeRead = 'beforeRead';
@@ -2316,10 +2316,10 @@
     var minProp = axis === 'y' ? top : left;
     var maxProp = axis === 'y' ? bottom : right;
     var endDiff = state.rects.reference[len] + state.rects.reference[axis] - popperOffsets[axis] - state.rects.popper[len];
-    var swptbDiff = popperOffsets[axis] - state.rects.reference[axis];
+    var swptbootDiff = popperOffsets[axis] - state.rects.reference[axis];
     var arrowOffsetParent = getOffsetParent(arrowElement);
     var clientSize = arrowOffsetParent ? axis === 'y' ? arrowOffsetParent.clientHeight || 0 : arrowOffsetParent.clientWidth || 0 : 0;
-    var centerToReference = endDiff / 2 - swptbDiff / 2; // Make sure the arrow doesn't overflow the popper if the center point is
+    var centerToReference = endDiff / 2 - swptbootDiff / 2; // Make sure the arrow doesn't overflow the popper if the center point is
     // outside of the popper bounds
 
     var min = paddingObject[minProp];
@@ -2574,11 +2574,11 @@
   }
 
   var hash = {
-    swptb: 'end',
-    end: 'swptb'
+    swptboot: 'end',
+    end: 'swptboot'
   };
   function getOppositeVariationPlacement(placement) {
-    return placement.replace(/swptb|end/g, function (matched) {
+    return placement.replace(/swptboot|end/g, function (matched) {
       return hash[matched];
     });
   }
@@ -2830,7 +2830,7 @@
       var len = mainAxis === 'y' ? 'height' : 'width';
 
       switch (variation) {
-        case swptb:
+        case swptboot:
           offsets[mainAxis] = offsets[mainAxis] - (reference[len] / 2 - element[len] / 2);
           break;
 
@@ -2992,7 +2992,7 @@
 
       var _basePlacement = getBasePlacement(placement);
 
-      var isSwptbVariation = getVariation(placement) === swptb;
+      var isSwptbootVariation = getVariation(placement) === swptboot;
       var isVertical = [top, bottom].indexOf(_basePlacement) >= 0;
       var len = isVertical ? 'width' : 'height';
       var overflow = detectOverflow(state, {
@@ -3002,7 +3002,7 @@
         altBoundary: altBoundary,
         padding: padding
       });
-      var mainVariationSide = isVertical ? isSwptbVariation ? right : left : isSwptbVariation ? bottom : top;
+      var mainVariationSide = isVertical ? isSwptbootVariation ? right : left : isSwptbootVariation ? bottom : top;
 
       if (referenceRect[len] > popperRect[len]) {
         mainVariationSide = getOppositePlacement(mainVariationSide);
@@ -3266,8 +3266,8 @@
       var min$1 = popperOffsets[mainAxis] + overflow[mainSide];
       var max$1 = popperOffsets[mainAxis] - overflow[altSide];
       var additive = tether ? -popperRect[len] / 2 : 0;
-      var minLen = variation === swptb ? referenceRect[len] : popperRect[len];
-      var maxLen = variation === swptb ? -popperRect[len] : -referenceRect[len]; // We need to include the arrow in the calculation so the arrow doesn't go
+      var minLen = variation === swptboot ? referenceRect[len] : popperRect[len];
+      var maxLen = variation === swptboot ? -popperRect[len] : -referenceRect[len]; // We need to include the arrow in the calculation so the arrow doesn't go
       // outside the reference bounds
 
       var arrowElement = state.elements.arrow;
@@ -3683,7 +3683,7 @@
     left,
     auto,
     basePlacements,
-    swptb,
+    swptboot,
     end,
     clippingParents,
     viewport,
@@ -3746,18 +3746,18 @@
   const CLASS_NAME_SHOW$6 = 'show';
   const CLASS_NAME_DROPUP = 'dropup';
   const CLASS_NAME_DROPEND = 'dropend';
-  const CLASS_NAME_DROPSWPTB = 'dropswptb';
+  const CLASS_NAME_DROPSWPTBOOT = 'dropswptboot';
   const CLASS_NAME_NAVBAR = 'navbar';
   const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="dropdown"]';
   const SELECTOR_MENU = '.dropdown-menu';
   const SELECTOR_NAVBAR_NAV = '.navbar-nav';
   const SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
-  const PLACEMENT_TOP = isRTL() ? 'top-end' : 'top-swptb';
-  const PLACEMENT_TOPEND = isRTL() ? 'top-swptb' : 'top-end';
-  const PLACEMENT_BOTTOM = isRTL() ? 'bottom-end' : 'bottom-swptb';
-  const PLACEMENT_BOTTOMEND = isRTL() ? 'bottom-swptb' : 'bottom-end';
-  const PLACEMENT_RIGHT = isRTL() ? 'left-swptb' : 'right-swptb';
-  const PLACEMENT_LEFT = isRTL() ? 'right-swptb' : 'left-swptb';
+  const PLACEMENT_TOP = isRTL() ? 'top-end' : 'top-swptboot';
+  const PLACEMENT_TOPEND = isRTL() ? 'top-swptboot' : 'top-end';
+  const PLACEMENT_BOTTOM = isRTL() ? 'bottom-end' : 'bottom-swptboot';
+  const PLACEMENT_BOTTOMEND = isRTL() ? 'bottom-swptboot' : 'bottom-end';
+  const PLACEMENT_RIGHT = isRTL() ? 'left-swptboot' : 'right-swptboot';
+  const PLACEMENT_LEFT = isRTL() ? 'right-swptboot' : 'left-swptboot';
   const Default$8 = {
     offset: [0, 2],
     boundary: 'clippingParents',
@@ -3833,7 +3833,7 @@
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      if ('ontouchswptb' in document.documentElement && !parent.closest(SELECTOR_NAVBAR_NAV)) {
+      if ('ontouchswptboot' in document.documentElement && !parent.closest(SELECTOR_NAVBAR_NAV)) {
         [].concat(...document.body.children).forEach(elem => EventHandler.on(elem, 'mouseover', noop));
       }
 
@@ -3886,7 +3886,7 @@
       // empty mouseover listeners we added for iOS support
 
 
-      if ('ontouchswptb' in document.documentElement) {
+      if ('ontouchswptboot' in document.documentElement) {
         [].concat(...document.body.children).forEach(elem => EventHandler.off(elem, 'mouseover', noop));
       }
 
@@ -3959,7 +3959,7 @@
         return PLACEMENT_RIGHT;
       }
 
-      if (parentDropdown.classList.contains(CLASS_NAME_DROPSWPTB)) {
+      if (parentDropdown.classList.contains(CLASS_NAME_DROPSWPTBOOT)) {
         return PLACEMENT_LEFT;
       } // We need to trim the value because custom properties can also include spaces
 
@@ -5137,7 +5137,7 @@
           return;
         }
 
-        if (data[config] === undefined || config.swptbsWith('_') || config === 'constructor') {
+        if (data[config] === undefined || config.swptbootsWith('_') || config === 'constructor') {
           throw new TypeError(`No method named "${config}"`);
         }
 
@@ -5553,7 +5553,7 @@
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      if ('ontouchswptb' in document.documentElement) {
+      if ('ontouchswptboot' in document.documentElement) {
         [].concat(...document.body.children).forEach(element => {
           EventHandler.on(element, 'mouseover', noop);
         });
@@ -5608,7 +5608,7 @@
       tip.classList.remove(CLASS_NAME_SHOW$2); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
-      if ('ontouchswptb' in document.documentElement) {
+      if ('ontouchswptboot' in document.documentElement) {
         [].concat(...document.body.children).forEach(element => EventHandler.off(element, 'mouseover', noop));
       }
 
@@ -5706,7 +5706,7 @@
       }
 
       if (attachment === 'left') {
-        return 'swptb';
+        return 'swptboot';
       }
 
       return attachment;

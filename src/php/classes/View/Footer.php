@@ -1,6 +1,6 @@
 <?php
 
-namespace WPTB\View;
+namespace WPTBOOT\View;
 
 class Footer extends \WPSEED\View 
 {

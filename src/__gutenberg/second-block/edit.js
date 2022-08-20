@@ -7,7 +7,7 @@ export const BlockEdit = (props) => {
     
     return (
         <div {...blockProps}>
-            <h4>{__('Second Block edit', 'wptb')}</h4>
+            <h4>{__('Second Block edit', 'wptboot')}</h4>
         </div>
     );
 };

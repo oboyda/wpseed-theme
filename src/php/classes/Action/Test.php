@@ -1,5 +1,5 @@
 <?php 
-namespace WPTB\Action;
+namespace WPTBOOT\Action;
 
 class Test 
 {

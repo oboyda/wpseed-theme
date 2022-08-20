@@ -4,7 +4,7 @@
     "main": "build/index.js",
     "module": "src/index.js",
     "scripts": {
-        "swptb": "wp-scripts swptb",
+        "swptboot": "wp-scripts swptboot",
         "build": "wp-scripts build"
     },
     "devDependencies": {
