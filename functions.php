@@ -10,19 +10,22 @@ require WPTBOOT_DIR . '/src/php/setup.php';
 
 add_action('after_setup_theme', function(){
 
-    $deps = new \WPTBOOT\Deps([
+    $deps = new \WPSEED\Deps([
         'advanced-custom-fields-pro/acf.php'
         // 'wp-plugin-bootstrap/plugin.php'
+    ], [
+        'plugin_name' => WPTBOOT_NAME
     ]);
-    
+
     if($deps->check())
     {
-        require WPTBOOT_DIR . '/src/php/classes/load.php';
         require WPTBOOT_DIR . '/src/php/utils.php';
+        require WPTBOOT_DIR . '/src/php/class-load.php';
+        require WPTBOOT_DIR . '/src/php/mods.php';
         require WPTBOOT_DIR . '/src/php/scripts.php';
-        require WPTBOOT_DIR . '/src/php/widgets.php';
         require WPTBOOT_DIR . '/src/php/acf-blocks.php';
         require WPTBOOT_DIR . '/src/php/acf-fields.php';
+        // require WPTBOOT_DIR . '/src/php/debug.php';
     }
     
 }, 5);

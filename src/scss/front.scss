@@ -1,4 +1,4 @@
-// @import "./common.scss";
+// @import "../../assets/fonts/fonts.css";
 @import "./views.scss";
 
 /*
@@ -11,7 +11,7 @@ html, body {
     font-size: 12px;
     line-height: 1.4em;
     font-weight: 400;
-    color: #000000;
+    color: $color_black;
 
     @media (min-width: $breakpoint_desktop)
     {
@@ -24,15 +24,36 @@ html, body {
 * ----------------------------------------
 */
 
-a, a:hover, a:visited {
+a:not(.s-btn)
+{
     text-decoration: none;
-    color: inherit;
+    color: $color_yellow;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    &:hover, &:visited {
+        text-decoration: none;
+        color: $color_yellow;
+    }
 }
 
 p {
-    padding: 0 0 1.5em;
+    padding: 0 0 1.2em;
     margin: 0;
 }
 p:last-child {
     padding-bottom: 0;
+}
+
+/*
+* Headings
+* ----------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.4em;
+    padding: 0 0 1rem;
+    margin: 0;
 }

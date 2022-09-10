@@ -84,6 +84,7 @@ function wptboot_register_menus()
 {
     register_nav_menus(
         array(
+            'top' => esc_html__('Top menu', 'wptboot'),
             'primary' => esc_html__('Primary menu', 'wptboot'),
             'footer'  => __('Footer menu', 'wptboot')
         )
