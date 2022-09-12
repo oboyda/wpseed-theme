@@ -12,8 +12,8 @@ require WPTBOOT_DIR . '/src/php/utils.php';
 add_action('after_setup_theme', function(){
 
     $deps = new \WPSEED\Deps([
-        'advanced-custom-fields-pro/acf.php'
-        // 'wp-plugin-bootstrap/plugin.php'
+        'advanced-custom-fields-pro/acf.php',
+        'wp-plugin-bootstrap/plugin.php'
     ], [
         'plugin_name' => WPTBOOT_NAME
     ]);
