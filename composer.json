@@ -8,6 +8,10 @@
             "WPTBOOT\\Mod\\": "mods"
         }
     },
+    "repositories" : [
+        { "type": "vcs", "url": "https://github.com/oboyda/wp-seed" }
+    ],
     "require": {
+        "oboyda/wp-seed": "dev-main"
     }
 }
