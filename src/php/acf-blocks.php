@@ -5,9 +5,9 @@
 * ----------------------------------------
 */
 
-add_action('acf/init', 'wptboot_register_blocks');
+add_action('acf/init', 'tboot_register_blocks');
 
-function wptboot_register_blocks()
+function tboot_register_blocks()
 {
     if(function_exists('acf_register_block'))
     {
@@ -17,10 +17,10 @@ function wptboot_register_blocks()
         */
         acf_register_block([
             'name'				=> 'first-block',
-            'title'				=> __('WPTBOOT First Block', 'wptboot'),
-            //'description'		=> __('Block description.', 'wptboot'),
-            'render_callback'	=> 'wptboot_render_block_view',
-            'category'			=> 'wptboot-blocks',
+            'title'				=> __('TBOOT First Block', 'tboot'),
+            //'description'		=> __('Block description.', 'tboot'),
+            'render_callback'	=> 'tboot_render_block_view',
+            'category'			=> 'tboot-blocks',
             //'icon'				=> 'admin-comments'
             //'keywords'			=> [''],
             'view_args' => [],
@@ -33,12 +33,12 @@ function wptboot_register_blocks()
 * Register callback wrapper function
 * ----------------------------------------
 */
-function wptboot_render_block_view($block)
+function tboot_render_block_view($block)
 {
     $acf_prefix = 'acf/';
     $view = (strpos($block['name'], $acf_prefix) === 0) ? substr($block['name'], strlen($acf_prefix)) : $block['name'];
     $view_args = isset($block['view_args']) ? $block['view_args'] : [];
     $view_args['html_class'] = isset($block['className']) ? $block['className'] : '';
 
-    echo wptboot_get_view($view, $view_args);
+    echo tboot_get_view($view, $view_args);
 }

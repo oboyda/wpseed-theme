@@ -1,9 +1,9 @@
 <?php
 
-namespace WPTBOOT\View;
+namespace TBOOT\View;
 
-use WPTBOOT\Utils\Settings as Utils_Settings;
-use WPPBOOT\Utils\Date as Utils_Date;
+use TBOOT\Utils\Settings as Utils_Settings;
+use PBOOT\Utils\Date as Utils_Date;
 
 class Footer extends View 
 {

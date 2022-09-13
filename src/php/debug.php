@@ -3,7 +3,7 @@
 /*
  * Simple debug function with pre output
  */
-function wptboot_debug_pre($var)
+function tboot_debug_pre($var)
 {
     echo '<pre>';
         print_r($var);
@@ -13,7 +13,7 @@ function wptboot_debug_pre($var)
 /*
  * Simple debug function
  */
-function wptboot_debug($var, $append=false, $file_name='__debug.txt')
+function tboot_debug($var, $append=false, $file_name='__debug.txt')
 {
     $file_path = ABSPATH . '/' . $file_name;
 

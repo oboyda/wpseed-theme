@@ -3,10 +3,10 @@ import { __ } from '@wordpress/i18n';
 import { BlockEdit } from './edit';
 import { BlockSave } from './save';
 
-registerBlockType('wptboot/first-block', {
-    title: __('First Block', 'wptboot'),
+registerBlockType('tboot/first-block', {
+    title: __('First Block', 'tboot'),
     icon: 'admin-users',
-    category: 'wptboot-blocks',
+    category: 'tboot-blocks',
     edit: BlockEdit,
     save: BlockSave,
     attributes: {}

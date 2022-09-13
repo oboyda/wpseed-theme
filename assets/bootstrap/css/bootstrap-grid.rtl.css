@@ -1477,8 +1477,8 @@
   flex-wrap: wrap-reverse !important;
 }
 
-.justify-content-swptboot {
-  justify-content: flex-swptboot !important;
+.justify-content-stboot {
+  justify-content: flex-stboot !important;
 }
 
 .justify-content-end {
@@ -1501,8 +1501,8 @@
   justify-content: space-evenly !important;
 }
 
-.align-items-swptboot {
-  align-items: flex-swptboot !important;
+.align-items-stboot {
+  align-items: flex-stboot !important;
 }
 
 .align-items-end {
@@ -1521,8 +1521,8 @@
   align-items: stretch !important;
 }
 
-.align-content-swptboot {
-  align-content: flex-swptboot !important;
+.align-content-stboot {
+  align-content: flex-stboot !important;
 }
 
 .align-content-end {
@@ -1549,8 +1549,8 @@
   align-self: auto !important;
 }
 
-.align-self-swptboot {
-  align-self: flex-swptboot !important;
+.align-self-stboot {
+  align-self: flex-stboot !important;
 }
 
 .align-self-end {
@@ -2080,8 +2080,8 @@
     flex-wrap: wrap-reverse !important;
   }
 
-  .justify-content-sm-swptboot {
-    justify-content: flex-swptboot !important;
+  .justify-content-sm-stboot {
+    justify-content: flex-stboot !important;
   }
 
   .justify-content-sm-end {
@@ -2104,8 +2104,8 @@
     justify-content: space-evenly !important;
   }
 
-  .align-items-sm-swptboot {
-    align-items: flex-swptboot !important;
+  .align-items-sm-stboot {
+    align-items: flex-stboot !important;
   }
 
   .align-items-sm-end {
@@ -2124,8 +2124,8 @@
     align-items: stretch !important;
   }
 
-  .align-content-sm-swptboot {
-    align-content: flex-swptboot !important;
+  .align-content-sm-stboot {
+    align-content: flex-stboot !important;
   }
 
   .align-content-sm-end {
@@ -2152,8 +2152,8 @@
     align-self: auto !important;
   }
 
-  .align-self-sm-swptboot {
-    align-self: flex-swptboot !important;
+  .align-self-sm-stboot {
+    align-self: flex-stboot !important;
   }
 
   .align-self-sm-end {
@@ -2683,8 +2683,8 @@
     flex-wrap: wrap-reverse !important;
   }
 
-  .justify-content-md-swptboot {
-    justify-content: flex-swptboot !important;
+  .justify-content-md-stboot {
+    justify-content: flex-stboot !important;
   }
 
   .justify-content-md-end {
@@ -2707,8 +2707,8 @@
     justify-content: space-evenly !important;
   }
 
-  .align-items-md-swptboot {
-    align-items: flex-swptboot !important;
+  .align-items-md-stboot {
+    align-items: flex-stboot !important;
   }
 
   .align-items-md-end {
@@ -2727,8 +2727,8 @@
     align-items: stretch !important;
   }
 
-  .align-content-md-swptboot {
-    align-content: flex-swptboot !important;
+  .align-content-md-stboot {
+    align-content: flex-stboot !important;
   }
 
   .align-content-md-end {
@@ -2755,8 +2755,8 @@
     align-self: auto !important;
   }
 
-  .align-self-md-swptboot {
-    align-self: flex-swptboot !important;
+  .align-self-md-stboot {
+    align-self: flex-stboot !important;
   }
 
   .align-self-md-end {
@@ -3286,8 +3286,8 @@
     flex-wrap: wrap-reverse !important;
   }
 
-  .justify-content-lg-swptboot {
-    justify-content: flex-swptboot !important;
+  .justify-content-lg-stboot {
+    justify-content: flex-stboot !important;
   }
 
   .justify-content-lg-end {
@@ -3310,8 +3310,8 @@
     justify-content: space-evenly !important;
   }
 
-  .align-items-lg-swptboot {
-    align-items: flex-swptboot !important;
+  .align-items-lg-stboot {
+    align-items: flex-stboot !important;
   }
 
   .align-items-lg-end {
@@ -3330,8 +3330,8 @@
     align-items: stretch !important;
   }
 
-  .align-content-lg-swptboot {
-    align-content: flex-swptboot !important;
+  .align-content-lg-stboot {
+    align-content: flex-stboot !important;
   }
 
   .align-content-lg-end {
@@ -3358,8 +3358,8 @@
     align-self: auto !important;
   }
 
-  .align-self-lg-swptboot {
-    align-self: flex-swptboot !important;
+  .align-self-lg-stboot {
+    align-self: flex-stboot !important;
   }
 
   .align-self-lg-end {
@@ -3889,8 +3889,8 @@
     flex-wrap: wrap-reverse !important;
   }
 
-  .justify-content-xl-swptboot {
-    justify-content: flex-swptboot !important;
+  .justify-content-xl-stboot {
+    justify-content: flex-stboot !important;
   }
 
   .justify-content-xl-end {
@@ -3913,8 +3913,8 @@
     justify-content: space-evenly !important;
   }
 
-  .align-items-xl-swptboot {
-    align-items: flex-swptboot !important;
+  .align-items-xl-stboot {
+    align-items: flex-stboot !important;
   }
 
   .align-items-xl-end {
@@ -3933,8 +3933,8 @@
     align-items: stretch !important;
   }
 
-  .align-content-xl-swptboot {
-    align-content: flex-swptboot !important;
+  .align-content-xl-stboot {
+    align-content: flex-stboot !important;
   }
 
   .align-content-xl-end {
@@ -3961,8 +3961,8 @@
     align-self: auto !important;
   }
 
-  .align-self-xl-swptboot {
-    align-self: flex-swptboot !important;
+  .align-self-xl-stboot {
+    align-self: flex-stboot !important;
   }
 
   .align-self-xl-end {
@@ -4492,8 +4492,8 @@
     flex-wrap: wrap-reverse !important;
   }
 
-  .justify-content-xxl-swptboot {
-    justify-content: flex-swptboot !important;
+  .justify-content-xxl-stboot {
+    justify-content: flex-stboot !important;
   }
 
   .justify-content-xxl-end {
@@ -4516,8 +4516,8 @@
     justify-content: space-evenly !important;
   }
 
-  .align-items-xxl-swptboot {
-    align-items: flex-swptboot !important;
+  .align-items-xxl-stboot {
+    align-items: flex-stboot !important;
   }
 
   .align-items-xxl-end {
@@ -4536,8 +4536,8 @@
     align-items: stretch !important;
   }
 
-  .align-content-xxl-swptboot {
-    align-content: flex-swptboot !important;
+  .align-content-xxl-stboot {
+    align-content: flex-stboot !important;
   }
 
   .align-content-xxl-end {
@@ -4564,8 +4564,8 @@
     align-self: auto !important;
   }
 
-  .align-self-xxl-swptboot {
-    align-self: flex-swptboot !important;
+  .align-self-xxl-stboot {
+    align-self: flex-stboot !important;
   }
 
   .align-self-xxl-end {

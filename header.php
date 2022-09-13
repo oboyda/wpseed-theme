@@ -11,6 +11,6 @@
     
     <?php wp_body_open(); ?>
     
-    <?php wptboot_print_view('header'); ?>
+    <?php tboot_print_view('header'); ?>
 
     <div id="content">

@@ -4,8 +4,8 @@
     "version": "1.7.0",
     "autoload": {
         "psr-4": {
-            "WPTBOOT\\": "src/php",
-            "WPTBOOT\\Mod\\": "mods"
+            "TBOOT\\": "src/php",
+            "TBOOT\\Mod\\": "mods"
         }
     },
     "repositories" : [

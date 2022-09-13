@@ -131,7 +131,7 @@ jQuery(function ($) {
     const form = $(this);
     const btnSubmit = form.find("button[type='submit']");
     btnSubmit.prop("disabled", true);
-    $.post(wptbootIndexVars.ajaxurl, form.serialize(), function (resp) {
+    $.post(tbootIndexVars.ajaxurl, form.serialize(), function (resp) {
       // console.log(resp);
       if (resp.status) {
         if (resp.redirect) {

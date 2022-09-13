@@ -1,8 +1,8 @@
 <?php
 
-namespace WPTBOOT\View;
+namespace TBOOT\View;
 
-use WPTBOOT\Utils\Settings as Utils_Settings;
+use TBOOT\Utils\Settings as Utils_Settings;
 
 class Header extends View 
 {

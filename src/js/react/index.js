@@ -4,5 +4,5 @@ import App from './views/App';
 
 ReactDOM.render(
     <App />,
-    document.getElementById('wptboot-root')
+    document.getElementById('tboot-root')
 );

@@ -1,6 +1,6 @@
 <?php
 
-namespace WPTBOOT\View;
+namespace TBOOT\View;
 
 class View extends \WPSEED\View 
 {
@@ -21,12 +21,12 @@ class View extends \WPSEED\View
 
         parent::__construct($args, $default_args);
 
-        $this->_setHtmlClass();
+        $this->setHtmlClass();
     }
     
     protected function getField($name, $default=null)
     {
-        $_name = 'wptboot__' . $this->getName(true) . '__' . $name;
+        $_name = 'tboot__' . $this->getName(true) . '__' . $name;
         
         $field = get_field($_name);
         
@@ -35,70 +35,46 @@ class View extends \WPSEED\View
 
     protected function getGroupField($group, $name, $default=null)
     {
-        $_group = 'wptboot__' . $this->getName(true) . '__' . $group;
+        $_group = 'tboot__' . $this->getName(true) . '__' . $group;
         
         $field = get_field($_group);
 
         return (is_array($field) && isset($field[$name])) ? $field[$name] : $default;
     }
 
-    protected function _addHtmlClass($class)
-    {
-        if(is_string($this->args['html_class']))
-        {
-            $this->args['html_class'] = empty($this->args['html_class']) ? [] : explode(' ', $this->args['html_class']);
-        }
-        if(is_string($class))
-        {
-            $class = empty($class) ? [] : explode(' ', $class);
-        }
-
-        $this->args['html_class'] = array_merge($this->args['html_class'], $class);
-    }
-    
-    protected function _setHtmlClass()
+    protected function setHtmlClass()
     {
         if($this->args['bg_color'] !== '')
         {
             $bg_color = (strpos($this->args['bg_color'], 'bg-') === 0) ? $this->args['bg_color'] : 'bg-' . $this->args['bg_color'];
-            $this->_addHtmlClass($bg_color);
+            $this->addHtmlClass($bg_color);
         }
         
         if($this->args['top_level'])
         {
-            $this->_addHtmlClass('section');
+            $this->addHtmlClass('section');
         }
 
         if($this->args['padding_bottom'] !== '')
         {
             $pb = ($this->args['padding_bottom'] === 'none') ? '0' : $this->args['padding_bottom'];
-            $this->_addHtmlClass('pb-' . $pb);
+            $this->addHtmlClass('pb-' . $pb);
         }
         
         if($this->args['margin_bottom'] !== '')
         {
             $mb = ($this->args['margin_bottom'] === 'none') ? '0' : $this->args['margin_bottom'];
-            $this->_addHtmlClass('mb-' . $mb);
+            $this->addHtmlClass('mb-' . $mb);
         }
 
         if($this->args['hide_mobile'])
         {
-            $this->_addHtmlClass('hide-mobile');
+            $this->addHtmlClass('hide-mobile');
         }
         if($this->args['hide_desktop'])
         {
-            $this->_addHtmlClass('hide-desktop');
+            $this->addHtmlClass('hide-desktop');
         }
-    }
-    
-    public function _getHtmlClass($class=null)
-    {
-        if(isset($class))
-        {
-            $this->_addHtmlClass($class);
-        }
-
-        return $this->getHtmlClass($this->args['html_class']);
     }
     
     protected function getAdminPostId()

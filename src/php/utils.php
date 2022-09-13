@@ -1,21 +1,21 @@
 <?php 
 
-function wptboot_get_view($view_name, $args=[], $echo=false)
+function tboot_get_view($view_name, $args=[], $echo=false)
 {
-    return wpseed_get_view($view_name, $args, $echo, WPTBOOT_DIR . '/src/php/View/html', '\WPTBOOT\View');
+    return wpseed_get_view($view_name, $args, $echo, TBOOT_DIR . '/src/php/View/html', '\TBOOT\View');
 }
 
-function wptboot_print_view($view_name, $args=[])
+function tboot_print_view($view_name, $args=[])
 {
-    wptboot_get_view($view_name, $args, true);
+    tboot_get_view($view_name, $args, true);
 }
 
-function wptboot_get_mod_view($mod, $view_name, $args=[], $echo=false)
+function tboot_get_mod_view($mod, $view_name, $args=[], $echo=false)
 {
-    return wpseed_get_view($view_name, $args, $echo, WPTBOOT_DIR . '/mods/' . $mod . '/View/html', '\WPTBOOT\\' . $mod . '\View');
+    return wpseed_get_view($view_name, $args, $echo, TBOOT_DIR . '/mods/' . $mod . '/View/html', '\TBOOT\\' . $mod . '\View');
 }
 
-function wptboot_print_mod_view($mod, $view_name, $args=[])
+function tboot_print_mod_view($mod, $view_name, $args=[])
 {
-    wptboot_get_mod_view($mod, $view_name, $args, true);
+    tboot_get_mod_view($mod, $view_name, $args, true);
 }

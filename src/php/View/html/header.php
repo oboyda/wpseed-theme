@@ -1,4 +1,4 @@
-<header id="header" class="<?php echo $view->getHtmlClass(); ?>" data-view="<?php echo $view->getName(); ?>">
+<header class="<?php echo $view->getHtmlClass(); ?>" data-view="<?php echo $view->getName(); ?>">
     <div class="header-inner">
         <div class="container">
             <div class="h-1 d-none d-lg-block">

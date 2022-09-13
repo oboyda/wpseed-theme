@@ -1,4 +1,4 @@
-<footer id="footer" class="<?php echo $view->getHtmlClass(); ?>">
+<footer class="<?php echo $view->getHtmlClass(); ?>">
 
     <div class="footer-widgets">
         <div class="container">

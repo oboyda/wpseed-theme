@@ -1,8 +1,8 @@
 <?php
 
-namespace WPTBOOT\Utils;
+namespace TBOOT\Utils;
 
-class Base extends \WPPBOOT\Utils\Base 
+class Base extends \PBOOT\Utils\Base 
 {
     static function parsePhoneTel($num_str)
     {

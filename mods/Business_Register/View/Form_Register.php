@@ -1,6 +1,6 @@
 <?php
 
-namespace WPTBOOT\Mod\Business_Register\View;
+namespace TBOOT\Mod\Business_Register\View;
 
 class Form_Register extends \WPSEED\View 
 {

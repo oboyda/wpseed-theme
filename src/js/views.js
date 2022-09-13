@@ -53,7 +53,7 @@ jQuery(function($)
 
         btnSubmit.prop("disabled", true);
 
-        $.post(wptbootIndexVars.ajaxurl, form.serialize(), function(resp){
+        $.post(tbootIndexVars.ajaxurl, form.serialize(), function(resp){
             // console.log(resp);
             if(resp.status)
             {

@@ -62,13 +62,13 @@ class Utils {
 
     static subscribeToEvent(name, handler, elem=document.body)
     {
-        const _name = (name.indexOf('wptboot__') === 0) ? name : 'wptboot__' + name;
+        const _name = (name.indexOf('tboot__') === 0) ? name : 'tboot__' + name;
         elem.addEventListener(_name, handler, false);
     }
 
     static unsubscribeFromEvent(name, handler, elem=document.body)
     {
-        const _name = (name.indexOf('wptboot__') === 0) ? name : 'wptboot__' + name;
+        const _name = (name.indexOf('tboot__') === 0) ? name : 'tboot__' + name;
         elem.removeEventListener(_name, handler);
     }
 
@@ -81,7 +81,7 @@ class Utils {
             args.detail = data;
         }
         
-        const _name = (name.indexOf('wptboot__') === 0) ? name : 'wptboot__' + name;
+        const _name = (name.indexOf('tboot__') === 0) ? name : 'tboot__' + name;
         const event = new CustomEvent(_name, args);
         
         elem.dispatchEvent(event);

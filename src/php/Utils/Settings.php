@@ -1,6 +1,6 @@
 <?php
 
-namespace WPTBOOT\Utils;
+namespace TBOOT\Utils;
 
 class Settings 
 {
