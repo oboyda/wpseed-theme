@@ -94,26 +94,12 @@ class View extends \WPSEED\View
     
     public function getContainerTagOpen($type='lg')
     {
-        $tag_open = $this->has_top_level() ? '<div class="container-' . $type . '">' : '';
-
-        if($tag_open && $this->has_container_narrow())
-        {
-            $tag_open .= '<div class="cont-narrow">';
-        }
-
-        return $tag_open;
+        return $this->has_top_level() ? '<div class="container-' . $type . '">' : '';
     }
     
     public function getContainerTagClose()
     {
-        $tag_close = $this->has_top_level() ? '</div><!-- .container -->' : '';
-
-        if($tag_close && $this->has_container_narrow())
-        {
-            $tag_close = '</div><!-- .cont-narrow -->' . $tag_close;
-        }
-
-        return $tag_close;
+        return $this->has_top_level() ? '</div><!-- .container -->' : '';
     }
 
     static function implodeAtts($atts)
