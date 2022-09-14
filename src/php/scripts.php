@@ -109,7 +109,7 @@ add_action('wp_enqueue_scripts', 'tboot_enqueue_scripts_front');
 function tboot_enqueue_scripts_front()
 {
     wp_enqueue_script('tboot-front');
-    wp_localize_script('tboot-front', 'tbootFrontVars', apply_filters('tboot_js_front_vars', [
+    wp_localize_script('tboot-front', 'tbootIndexVars', apply_filters('tboot_js_index_vars', [
         'ajaxurl' => admin_url('admin-ajax.php')
     ]));
 }
@@ -123,7 +123,9 @@ add_action('admin_enqueue_scripts', 'tboot_enqueue_scripts_admin');
 function tboot_enqueue_scripts_admin()
 {
     wp_enqueue_script('tboot-admin');
-    wp_localize_script('tboot-admin', 'tbootAdminVars', apply_filters('tboot_js_admin_vars', []));
+    wp_localize_script('tboot-admin', 'tbootIndexVars', apply_filters('tboot_js_index_vars', [
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ]));
 }
 
 /*
