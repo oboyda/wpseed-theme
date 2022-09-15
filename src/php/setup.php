@@ -8,8 +8,8 @@ add_action('after_setup_theme', 'tboot_load_textdomain');
 
 function tboot_load_textdomain()
 {
-    //load_child_theme_textdomain('tboot', TBOOT_DIR . '/langs');
-    load_theme_textdomain('tboot', TBOOT_DIR . '/langs');
+    //load_child_theme_textdomain('tboot', TBOOT_DIR . '/languages');
+    load_theme_textdomain('tboot', TBOOT_DIR . '/languages');
 }
 
 /*
