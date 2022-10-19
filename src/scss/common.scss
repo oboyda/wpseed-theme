@@ -150,10 +150,10 @@ ul.ns li, ol.ns li {
 * ----------------------------------------
 */
 
-.square {
-    width: 50%;
+.rect-100-100 {
+    width: 100%;
 }
-.square:after {
+.rect-100-100:after {
     content: "";
     display: block;
     padding-bottom: 100%;
