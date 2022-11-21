@@ -1,6 +1,6 @@
 	</div><!-- #content -->
 
-    <?php tboot_print_view('footer'); ?>
+    <?php pboot_print_view('footer'); ?>
 
     <?php wp_footer(); ?>
 

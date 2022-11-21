@@ -12,6 +12,8 @@
     
     <?php wp_body_open(); ?>
     
-    <?php tboot_print_view('header'); ?>
+    <?php 
+    pboot_print_view('header'); 
+    ?>
 
-    <div id="content">
+    <div class="site-content">
