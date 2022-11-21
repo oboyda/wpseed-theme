@@ -13,7 +13,7 @@
     <?php wp_body_open(); ?>
     
     <?php 
-    pboot_print_view('header'); 
+    tboot_print_view('header'); 
     ?>
 
     <div class="site-content">

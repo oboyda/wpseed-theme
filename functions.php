@@ -7,6 +7,11 @@ define('TBOOT_NAME', wp_get_theme()->get('Theme Name'));
 
 add_action('after_setup_theme', function(){
 
+    if(!class_exists('\WPSEED\Deps'))
+    {
+        return;
+    }
+
     $deps = new \WPSEED\Deps([
         'oferanto-plugin/plugin.php'
     ], [
