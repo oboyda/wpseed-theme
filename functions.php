@@ -13,7 +13,7 @@ add_action('after_setup_theme', function(){
     }
 
     $deps = new \WPSEED\Deps([
-        'oferanto-plugin/plugin.php'
+        'wpseed-plugin/plugin.php'
     ], [
         'plugin_name' => TBOOT_NAME
     ]);
